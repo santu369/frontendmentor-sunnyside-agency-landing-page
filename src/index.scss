@@ -1,18 +1,12 @@
 @use "./common.scss" as *;
-@import "~bootstrap/scss/bootstrap.scss";
+// @import "bootstrap/scss/bootstrap.scss";
 
 body {
-  font-family: $font-rubik;
+  font-family: $font-fraunces;
   font-size: $font-size;
-  font-weight: $font-reg;
+  font-weight: $font-semi-bold;
   text-align: center;
   min-width: 18.75rem;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  background: $background-bg;
-  color: white;
-  padding: 2rem 1rem;
 }
 
 /* screen reader only class */
@@ -26,7 +20,7 @@ body {
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
   border: 0;
-  color: $white;
+  color: $neu-white;
 }
 
 ul {
@@ -35,7 +29,26 @@ ul {
 }
 
 a {
+  outline: none;
   text-decoration: none;
+  &:focus-visible {
+    outline: 0.2rem dashed $neu-white;
+    outline-offset: 0.25rem;
+    color: $neu-very-dark-blue;
+  }
+  &:hover {
+    color: $neu-very-dark-blue;
+  }
+}
+button {
+  &:focus-visible {
+    outline: 0.2rem dashed $neu-white;
+    outline-offset: 0.25rem;
+    color: $neu-very-dark-blue;
+  }
+  &:hover {
+    color: $neu-very-dark-blue;
+  }
 }
 
 @media only screen and (min-width: 64rem) {
@@ -48,7 +61,14 @@ a {
 /* no animations for users who prefer reduced animations */
 
 @media (prefers-reduced-motion: reduce) {
-  * {
-    animation-duration: 1ms !important;
+  *,
+  *:before,
+  *:after {
+    animation-duration: 0ms !important;
+  }
+  *,
+  *:before,
+  *:after {
+    transition-duration: 0ms !important;
   }
 }

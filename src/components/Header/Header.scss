@@ -1,0 +1,156 @@
+@use "../../common.scss" as *;
+
+.Header {
+  &__logo {
+    width: 7.75rem;
+    height: 1.5rem;
+  }
+  &__menu-btn {
+    display: flex;
+    cursor: pointer;
+    outline: none;
+    height: 2rem;
+    width: 2rem;
+    background: transparent;
+  }
+  &__menu {
+    transition: all 350ms ease-in-out;
+    position: relative;
+    height: 0.125rem;
+    background: $menu;
+    width: 1.625rem;
+    display: block;
+    &:before,
+    &:after {
+      transition: all 350ms ease-in-out;
+      content: "";
+      position: absolute;
+      width: 1.625rem;
+      height: 0.125rem;
+      background: $menu;
+      left: 0;
+    }
+    &:before {
+      top: -0.5rem;
+    }
+    &:after {
+      top: 0.5rem;
+    }
+  }
+  &__nav {
+    transform: translateY(-200%);
+    transition: transform 350ms ease-in-out;
+    z-index: 1;
+    background: $highlight-bg;
+    width: 90%;
+    top: 7rem;
+    padding: 1.5rem;
+    position: absolute;
+    &:before {
+      position: absolute;
+      content: "";
+      width: 0;
+      height: 0;
+      border-top: 1.5rem solid transparent;
+      border-bottom: 1.5rem solid transparent;
+      border-right: 1.5rem solid $neu-white;
+      top: -1.5rem;
+      right: 0;
+    }
+  }
+  &__nav--close {
+    .Header__menu {
+      width: 0;
+      &:before,
+      &:after {
+        top: 0;
+        left: -0.75rem;
+      }
+      &:before {
+        transform: rotateZ(45deg);
+      }
+      &:after {
+        transform: rotateZ(-45deg);
+      }
+    }
+  }
+  &__nav-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  &__nav-item {
+  }
+  &__nav-item--highlight {
+  }
+  &__nav-link {
+    font-family: $font-barlow;
+    color: $neu-gray-blue;
+    position: relative;
+    display: inline-block;
+    padding: 0.2rem;
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: 0rem;
+      left: 0;
+      width: 0;
+      height: 0.2rem;
+      background: $neu-very-dark-blue;
+    }
+    &:hover:after {
+      transition: width 350ms ease-in;
+      width: 100%;
+    }
+  }
+  &__nav-link--highlight {
+    display: inline-block;
+    font-family: $font-fraunces;
+    padding: 1rem 2rem;
+    background: $prim-yellow;
+    color: $neu-very-dark-blue;
+    font-size: 1rem;
+  }
+  &__nav-link--highlight:hover:after {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 48rem) {
+  .Header {
+    &__menu-btn {
+      display: none;
+    }
+    &__nav {
+      transform: translateY(0);
+      width: unset;
+      background: unset;
+      top: unset;
+      position: relative;
+      padding: 0;
+      &:before {
+        display: none;
+      }
+    }
+    &__nav-list {
+      flex-direction: row;
+      align-items: center;
+      margin: 0;
+    }
+    &__nav-link {
+      color: $neu-white;
+    }
+    &__nav-link--highlight {
+      background: $neu-white;
+      color: $neu-very-dark-blue;
+    }
+    &__nav-link--highlight:hover {
+      color: $neu-white;
+      background: $cta-highlight-bg;
+    }
+    &__nav-link--highlight:focus-visible {
+      color: $neu-white;
+      background: $cta-highlight-bg;
+    }
+  }
+}

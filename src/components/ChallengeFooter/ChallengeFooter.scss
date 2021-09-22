@@ -1,0 +1,51 @@
+@use "../../common.scss" as *;
+
+.ChallengeFooter {
+  font-family: $font-barlow;
+  background: $footer-bg;
+  &__logo {
+    height: 1.5rem;
+    width: 7.75rem;
+    margin: 0 auto;
+  }
+  &__logo > img {
+    filter: brightness(0) saturate(100%) invert(34%) sepia(45%) saturate(499%)
+      hue-rotate(116deg) brightness(102%) contrast(88%);
+  }
+  &__list {
+    max-width: 26.5625rem;
+    margin: 0 auto;
+  }
+  &__list-link {
+    color: $prim-footer;
+    position: relative;
+    display: inline-block;
+    padding: 0.2rem;
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: 0rem;
+      left: 0;
+      width: 0;
+      height: 0.2rem;
+      background: $neu-very-dark-blue;
+    }
+    &:hover {
+      color: $neu-white;
+    }
+    &:focus-visible {
+      color: $neu-white;
+    }
+    &:hover:after {
+      transition: width 350ms ease-in;
+      width: 100%;
+      background: $neu-white;
+    }
+  }
+  &__social-list {
+  }
+  &__social-link:hover > img {
+    filter: brightness(0) saturate(100%) invert(100%) sepia(13%) saturate(7488%)
+      hue-rotate(180deg) brightness(106%) contrast(97%);
+  }
+}

@@ -1,0 +1,61 @@
+@use "../../common.scss" as *;
+
+.Highlights {
+  &__illustration > img {
+    display: block;
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+  }
+  &__text {
+    padding: 1.5rem;
+  }
+  &__text[data-highlight="graphic"] {
+    color: $prim-graphic;
+  }
+  &__text[data-highlight="photography"] {
+    color: $prim-photography;
+  }
+  &__heading {
+    font-weight: $font-black;
+    font-size: calc(1.75rem + 0.1vw);
+  }
+  &__lead {
+    font-family: $font-barlow;
+    font-weight: $font-semi-bold;
+    font-size: 0.9rem;
+  }
+}
+
+@media only screen and (min-width: 48rem) {
+  .Highlights {
+    &__illustration {
+      display: block;
+    }
+    &__illustration > img {
+      height: 40rem;
+    }
+    &__text {
+      padding: 0 2rem;
+    }
+  }
+}
+
+@media only screen and (min-width: 64rem) {
+  .Highlights {
+    flex: 1;
+    &__lead {
+      margin-bottom: 3rem;
+    }
+  }
+}
+
+@media only screen and (min-width: 78rem) {
+  .Highlights {
+    &__text {
+      left: 50%;
+      transform: translateX(-50%);
+      width: 24rem;
+    }
+  }
+}

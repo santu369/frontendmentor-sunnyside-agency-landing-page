@@ -2,53 +2,59 @@
 
 .App {
   min-width: 15rem;
-  width: 70rem;
-  max-width: 90vw;
-}
-
-.footer {
-  margin-top: 1rem;
-  text-align: center;
-}
-
-.footer > p {
-  font-weight: $font-light;
-}
-
-.footer a {
-  margin-left: 0.5em;
-  font-weight: $font-medium;
-  &:hover,
-  &:focus-visible {
-    outline: 0.15rem dashed white;
-    outline-offset: 0.2rem;
+  overflow: hidden;
+  // width: 70rem;
+  max-width: 120rem;
+  margin: 0 auto;
+  &__banner {
+    background-image: $banner-mobile-img;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center bottom;
+    min-height: 100vh;
+  }
+  &__main {
+    background: $highlight-bg;
+  }
+  &__testimonials-container {
+  }
+  &__testimonials {
+    color: $neu-gray-blue;
+    margin: 3rem;
+    // background: $highlight-bg;
+  }
+  &__testimonials-heading {
+    font-size: calc(1rem + 1vw);
+  }
+  &__image-gallery {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media only screen and (min-width: 48rem) {
   .App {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1.5rem;
-  }
-  .footer {
-    margin-top: 2rem;
+    &__banner {
+      background-image: $banner-desktop-img;
+    }
+    &__highlights {
+      display: flex;
+    }
+    &__testimonials {
+      margin-right: 1rem;
+      margin-left: 1rem;
+    }
+    &__image-gallery {
+      display: grid;
+      grid-template-rows: repeat(1, 1fr);
+      grid-template-columns: repeat(4, 1fr);
+    }
   }
 }
 
 @media only screen and (min-width: 64rem) {
-  .App {
-    height: 32rem;
-    grid-template-rows: repeat(2, 1fr);
-  }
 }
 
 @media only screen and (min-width: 64rem) and (min-height: 45rem) {
-  .footer {
-    position: absolute;
-    margin-top: 3rem;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-  }
 }

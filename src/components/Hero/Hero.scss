@@ -1,0 +1,55 @@
+@use "../../common.scss" as *;
+
+.Hero {
+  margin-top: 3rem;
+  &__heading {
+    color: $neu-white;
+    font-size: calc(2.5rem + 1.5vw);
+    font-weight: $font-black;
+    letter-spacing: 0.25rem;
+  }
+  &__down-arrow {
+    animation: updown 2s ease infinite;
+    cursor: pointer;
+    > img {
+      padding: 0.75rem;
+    }
+    &:hover > img {
+      filter: brightness(0) saturate(100%) invert(22%) sepia(10%)
+        saturate(6407%) hue-rotate(163deg) brightness(95%) contrast(81%);
+    }
+    &:focus-visible {
+      outline-color: $neu-very-dark-blue;
+    }
+  }
+}
+
+@keyframes updown {
+  0% {
+    transform: translateY(-15%);
+  }
+  50% {
+    transform: translateY(15%);
+  }
+  100% {
+    transform: translateY(-15%);
+  }
+}
+
+@media only screen and (min-width: 48rem) {
+  .Hero {
+    &__heading {
+      margin-top: 5rem;
+    }
+    &__down-arrow {
+      margin-top: 5rem;
+    }
+  }
+}
+@media only screen and (min-width: 48rem) {
+  .Hero {
+    &__down-arrow {
+      margin-top: 2rem;
+    }
+  }
+}

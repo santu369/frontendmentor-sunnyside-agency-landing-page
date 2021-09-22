@@ -1,0 +1,34 @@
+@use "../../common.scss" as *;
+
+.Testimonial {
+  &__user-img {
+    width: 5rem;
+    height: 5rem;
+  }
+  &__user-statement {
+    font-family: $font-barlow;
+    color: $neu-very-dark-gray-blue;
+    font-size: 1rem;
+  }
+  &__user-details {
+  }
+  &__user-name {
+    color: $neu-very-dark-blue;
+  }
+  &__user-role {
+    font-family: $font-barlow;
+    color: $neu-gray-blue;
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (min-width: 48rem) {
+  .Testimonial {
+    width: 30%;
+    &__user-statement {
+      max-width: 20rem;
+      margin: 0 auto;
+      margin-bottom: 3rem;
+    }
+  }
+}

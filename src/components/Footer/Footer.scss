@@ -1,0 +1,38 @@
+@use "../../common.scss" as *;
+
+.Footer {
+  margin-top: -1rem;
+  text-align: center;
+  background: $footer-bg;
+  color: $neu-very-dark-blue;
+  p {
+    font-family: $font-barlow;
+    font-size: 0.75rem;
+    font-weight: $font-semi-bold;
+  }
+  a {
+    color: $neu-very-dark-blue;
+    font-family: $font-fraunces;
+    margin-left: 0.5em;
+    font-weight: $font-bold;
+    position: relative;
+    display: inline-block;
+    padding: 0.1rem;
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: 0rem;
+      left: 0;
+      width: 0;
+      height: 0.2rem;
+      background: $neu-very-dark-blue;
+    }
+    &:focus-visible {
+      outline-offset: 0.15rem;
+    }
+    &:hover:after {
+      transition: width 350ms ease-in;
+      width: 100%;
+    }
+  }
+}
