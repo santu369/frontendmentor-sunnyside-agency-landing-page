@@ -6,7 +6,11 @@ import downArrow from "../../images/icon-arrow-down.svg";
 const Hero = () => {
   return (
     <div className="Hero d-flex flex-column gap-5 align-items-center">
-      <h1 className="Hero__heading d-block text-uppercase">we are creatives</h1>
+      <header>
+        <h1 className="Hero__heading d-block text-uppercase">
+          we are creatives
+        </h1>
+      </header>
       <a className="Hero__down-arrow" href="#content">
         <img src={downArrow} alt="Scroll DowTo Content" />
       </a>
