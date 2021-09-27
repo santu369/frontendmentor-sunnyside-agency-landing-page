@@ -100,9 +100,18 @@
 
 @media only screen and (min-width: 64rem) {
   .MainHighlights {
+    &__text-container {
+      max-width: 60%;
+    }
     &__lead {
       margin-top: 2rem;
       margin-bottom: 3rem;
+    }
+    &__heading {
+      font-size: calc(2.5rem + 0.1vw);
+    }
+    &__lead {
+      font-size: calc(1rem + 0.1vw);
     }
   }
 }
