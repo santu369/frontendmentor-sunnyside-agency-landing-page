@@ -46,6 +46,7 @@
     top: 7rem;
     padding: 1.5rem;
     position: absolute;
+    visibility: hidden;
     &:before {
       position: absolute;
       content: "";
@@ -110,9 +111,30 @@
     background: $prim-yellow;
     color: $neu-very-dark-blue;
     font-size: 1rem;
+    &:hover,
+    &:focus-visible {
+      color: $neu-white;
+      background: $cta-highlight-bg;
+    }
   }
   &__nav-link--highlight:hover:after {
     display: none;
+  }
+}
+
+@keyframes menuvisible {
+  0%,
+  100% {
+    visibility: visible;
+  }
+}
+@keyframes menuhidden {
+  0%,
+  80% {
+    visibility: visible;
+  }
+  100% {
+    visibility: hidden;
   }
 }
 
@@ -122,6 +144,7 @@
       display: none;
     }
     &__nav {
+      visibility: visible;
       transform: translateY(0);
       width: unset;
       background: unset;

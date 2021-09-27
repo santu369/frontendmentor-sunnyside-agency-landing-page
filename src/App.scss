@@ -3,7 +3,6 @@
 .App {
   min-width: 15rem;
   overflow: hidden;
-  // width: 70rem;
   max-width: 120rem;
   margin: 0 auto;
   &__banner {
@@ -21,7 +20,6 @@
   &__testimonials {
     color: $neu-gray-blue;
     margin: 3rem;
-    // background: $highlight-bg;
   }
   &__testimonials-heading {
     font-size: calc(1rem + 1vw);

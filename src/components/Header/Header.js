@@ -5,12 +5,6 @@ import logo from "../../images/logo.svg";
 
 const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
-
-  // useEffect(() => {
-  //   if (showMenu) {
-
-  //   }
-  // }, [showMenu]);
   return (
     <header className="Header d-flex justify-content-between align-items-center w-100">
       <a className="Header__logo" href="#">
@@ -20,8 +14,7 @@ const Header = () => {
         className={`Header__menu-btn p-0 align-items-center justify-content-center border-0 ${
           showMenu ? "Header__nav--close" : ""
         }`}
-        // className="Header__menu-btn p-0 align-items-center justify-content-center border-0"
-        // style={showMenu ? { width: "0" } : {}}
+        aria-expanded={showMenu}
         onClick={() => {
           setShowMenu(!showMenu);
         }}
@@ -31,27 +24,47 @@ const Header = () => {
       </button>
       <nav
         className="Header__nav rounded-1"
-        style={showMenu ? { transform: "translateY(0)" } : {}}
+        style={
+          showMenu
+            ? {
+                transform: "translateY(0)",
+                animation: "menuvisible 350ms ease forwards",
+              }
+            : { animation: "menuhidden 350ms ease" }
+        }
       >
         <ul className="Header__nav-list">
           <li className="Header__nav-item">
-            <a href="#" className="Header__nav-link text-capitalize">
+            <a
+              href="#"
+              target="_self"
+              className="Header__nav-link text-capitalize"
+            >
               about
             </a>
           </li>
           <li className="Header__nav-item">
-            <a href="#" className="Header__nav-link text-capitalize">
+            <a
+              href="#"
+              target="_self"
+              className="Header__nav-link text-capitalize"
+            >
               services
             </a>
           </li>
           <li className="Header__nav-item">
-            <a href="#" className="Header__nav-link text-capitalize">
+            <a
+              href="#"
+              target="_self"
+              className="Header__nav-link text-capitalize"
+            >
               projects
             </a>
           </li>
           <li className="Header__nav-item Header__nav-item--highlight text-uppercase">
             <a
               href="#"
+              target="_self"
               className="Header__nav-link Header__nav-link--highlight rounded-pill"
             >
               contact

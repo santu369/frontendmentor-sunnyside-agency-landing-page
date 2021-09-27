@@ -16,24 +16,24 @@ const ChallengeFooter = () => {
       </div>
       <ul className="ChallengeFooter__list my-4 d-flex flex-wrap justify-content-evenly">
         <li className="ChallengeFooter__list-item">
-          <a className="ChallengeFooter__list-link" href="#">
+          <a className="ChallengeFooter__list-link" href="#" target="_self">
             About
           </a>
         </li>
         <li className="ChallengeFooter__list-item">
-          <a className="ChallengeFooter__list-link" href="#">
+          <a className="ChallengeFooter__list-link" href="#" target="_self">
             Services
           </a>
         </li>
         <li className="ChallengeFooter__list-item">
-          <a className="ChallengeFooter__list-link" href="#">
+          <a className="ChallengeFooter__list-link" href="#" target="_self">
             Projects
           </a>
         </li>
       </ul>
       <ul className="ChallengeFooter__social-list mt-5 d-flex gap-3 justify-content-center">
         <li className="ChallengeFooter__social-list-item">
-          <a href="#" className="ChallengeFooter__social-link">
+          <a href="#" target="_self" className="ChallengeFooter__social-link">
             <img
               className="ChallengeFooter__social-icon"
               src={facebookLogo}
@@ -42,7 +42,7 @@ const ChallengeFooter = () => {
           </a>
         </li>
         <li className="ChallengeFooter__social-list-item">
-          <a href="#" className="ChallengeFooter__social-link">
+          <a href="#" target="_self" className="ChallengeFooter__social-link">
             <img
               className="ChallengeFooter__social-icon"
               src={instagramLogo}
@@ -51,7 +51,7 @@ const ChallengeFooter = () => {
           </a>
         </li>
         <li className="ChallengeFooter__social-list-item">
-          <a href="#" className="ChallengeFooter__social-link">
+          <a href="#" target="_self" className="ChallengeFooter__social-link">
             <img
               className="ChallengeFooter__social-icon"
               src={twitterLogo}
@@ -60,7 +60,7 @@ const ChallengeFooter = () => {
           </a>
         </li>
         <li className="ChallengeFooter__social-list-item">
-          <a href="#" className="ChallengeFooter__social-link">
+          <a href="#" target="_self" className="ChallengeFooter__social-link">
             <img
               className="ChallengeFooter__social-icon"
               src={pinterestLogo}
