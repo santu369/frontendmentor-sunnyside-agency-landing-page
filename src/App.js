@@ -30,10 +30,10 @@ import Footer from "./components/Footer/Footer";
 function App() {
   return (
     <div className="App d-flex flex-column justify-content-center">
-      <div className="App__banner w-100 px-3 py-4">
+      <header className="App__banner w-100 px-3 py-4">
         <Header />
         <Hero />
-      </div>
+      </header>
       <main className="App__main" id="content">
         <MainHighlight
           desktopIcon={desktopMainHighlightTransform}

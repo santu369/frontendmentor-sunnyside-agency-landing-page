@@ -6,7 +6,7 @@ import logo from "../../images/logo.svg";
 const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
   return (
-    <header className="Header d-flex justify-content-between align-items-center w-100">
+    <div className="Header d-flex justify-content-between align-items-center w-100">
       <a className="Header__logo" href="#">
         <img src={logo} alt="Sunny Side Logo" />
       </a>
@@ -72,7 +72,7 @@ const Header = () => {
           </li>
         </ul>
       </nav>
-    </header>
+    </div>
   );
 };
 
