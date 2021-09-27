@@ -138,6 +138,13 @@
   }
 }
 
+.menuvisible {
+  animation: menuvisible 350ms ease forwards;
+}
+.menuhidden {
+  animation: menuhidden 350ms ease forwards;
+}
+
 @media only screen and (min-width: 48rem) {
   .Header {
     &__menu-btn {

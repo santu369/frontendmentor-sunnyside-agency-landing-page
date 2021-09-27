@@ -23,15 +23,10 @@ const Header = () => {
         <span className="sr-only">Menu</span>
       </button>
       <nav
-        className="Header__nav rounded-1"
-        style={
-          showMenu
-            ? {
-                transform: "translateY(0)",
-                animation: "menuvisible 350ms ease forwards",
-              }
-            : { animation: "menuhidden 350ms ease" }
-        }
+        className={`Header__nav rounded-1 ${
+          showMenu ? "menuvisible" : "menuhidden"
+        }`}
+        style={showMenu ? { transform: "translateY(0)" } : {}}
       >
         <ul className="Header__nav-list">
           <li className="Header__nav-item">
